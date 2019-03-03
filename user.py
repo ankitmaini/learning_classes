@@ -46,3 +46,26 @@ if input('Do you wish to reset login attempts? ') == 'Y':
     import time
     time.sleep(2)
     print(ankit.first_name, ' attempted to login ' ,ankit.login_attempts, 'times!')
+else:
+    print(ankit.first_name, ' attempted to login ' ,ankit.login_attempts, 'times!')
+
+
+
+# An administrator is a special kind of user. So the admin inherits the user class with some special priviliges.
+# Defining a class called Admin
+class Admin(User):
+    '''Attempting to program an Admin class.'''
+
+    def __init__(self, first_name, last_name, age, priviliges):
+        super().__init__(first_name, last_name, age)
+        self.priviliges = priviliges
+
+    def show_priviliges(self):
+        print('The administrator is vested with the following priviliges:')
+        for privilige in self.priviliges:
+            print('-',privilige)
+        
+
+# Making an instance of Admin class or making a new admin
+admin = Admin('Ankit', 'Maini', 24, ['can add post', 'can delete post', 'can ban user', 'can create new user accounts'])
+admin.show_priviliges()    

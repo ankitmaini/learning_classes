@@ -43,3 +43,22 @@ print(restaurant_1.number_served)
 # Incrementing the number of customers to the previous call
 restaurant_1.increment_number_served(20)
 print('Total service = ', restaurant_1.number_served)
+
+
+
+# Writing a child class named IceCreamStand with Restaurant as the parent class
+class IceCreamStand(Restaurant):
+    '''An attempt to model an ice cream stand as a child of a restaurant system.'''
+
+    def __init__(self, restaurant_name, cuisine_type, flavors):  # Overridden to specify the inputs I want to accept
+        super().__init__(restaurant_name, cuisine_type)          # Using the super function to inherit the already defined inputs
+        self.flavors = flavors
+    
+    def display_flavors(self):
+        print('\nThe ice-cream flavors available at ', self.restaurant_name, 'are: ')
+        for flavor in self.flavors:
+            print('-',flavor)
+    
+
+baskin_robbins = IceCreamStand('Baskin Robbins', 'Desserts', ['Strawberry', 'Chocolate', 'Vanilla', 'Butterscotch', 'Black Currant', 'Pineapple', 'Chocochip'])
+baskin_robbins.display_flavors()
