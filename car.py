@@ -41,3 +41,24 @@ my_used_car.update_odometer(23500)
 my_used_car.read_odometer()
 my_used_car.increment_odometer(3000)
 my_used_car.read_odometer()
+
+
+
+
+
+# Learning Inheritance
+# Say we want to make a class ElectricCar
+# Since ElectricCar is just a specific kind of car, we can base the # ElectricCar class on the basic Car class
+ # Initial Step: Making a simple version of the ElectricCar class which does everything the Car does
+
+class ElectricCar(Car):
+     '''Represnts aspects of a car, specific to electric vehicles.'''
+
+     def __init__(self, make, model, year):
+         '''Initialize the attributes of the parent class.'''
+        # The super() function is a special function that helps python make connections between the parent and child class. This line tells python to call the __init__() method from ElectricCar's parent class, which gives ElectricCar instance all the attributes of its parent class.      
+         super().__init__(make, model, year)
+
+
+my_tesla = ElectricCar('tesla', 'model s', 2016)
+print(my_tesla.get_descriptive_name())
