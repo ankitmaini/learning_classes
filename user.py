@@ -28,26 +28,26 @@ class User():
         self.login_attempts = 0
         print('Completed')
     
-ankit = User('Ankit', 'Maini', 22)
-x = User('X', 'Maini', 20)
-ankit.describe_user()
-x.greet_user()
+# ankit = User('Ankit', 'Maini', 22)
+# x = User('X', 'Maini', 20)
+# ankit.describe_user()
+# x.greet_user()
 
-ankit.increment_login_attempts()
-ankit.increment_login_attempts()
-ankit.increment_login_attempts()
-ankit.increment_login_attempts()
-ankit.increment_login_attempts()
-print(ankit.first_name, ' attempted to login ' ,ankit.login_attempts, 'times!')
-print('\n\n\n\n\n\n')
+# ankit.increment_login_attempts()
+# ankit.increment_login_attempts()
+# ankit.increment_login_attempts()
+# ankit.increment_login_attempts()
+# ankit.increment_login_attempts()
+# print(ankit.first_name, ' attempted to login ' ,ankit.login_attempts, 'times!')
+# print('\n\n\n\n\n\n')
 
-if input('Do you wish to reset login attempts? ') == 'Y':
-    ankit.reset_login_attempts()
-    import time
-    time.sleep(2)
-    print(ankit.first_name, ' attempted to login ' ,ankit.login_attempts, 'times!')
-else:
-    print(ankit.first_name, ' attempted to login ' ,ankit.login_attempts, 'times!')
+# if input('Do you wish to reset login attempts? ') == 'Y':
+#     ankit.reset_login_attempts()
+#     import time
+#     time.sleep(2)
+#     print(ankit.first_name, ' attempted to login ' ,ankit.login_attempts, 'times!')
+# else:
+#     print(ankit.first_name, ' attempted to login ' ,ankit.login_attempts, 'times!')
 
 
 # Writing a separate priviliges class - mind that this class was written after writing the admin class finding the clutter caused by the priviliges is more
@@ -80,5 +80,5 @@ class Admin(User):
         
 
 # Making an instance of Admin class or making a new admin
-admin = Admin('Ankit', 'Maini', 24, ['can add post', 'can delete post', 'can ban user', 'can create new user accounts'])
-admin.priviliges.show_priviliges()    
+# admin = Admin('Ankit', 'Maini', 24, ['can add post', 'can delete post', 'can ban user', 'can create new user accounts'])
+# admin.priviliges.show_priviliges()    
