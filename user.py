@@ -50,6 +50,22 @@ else:
     print(ankit.first_name, ' attempted to login ' ,ankit.login_attempts, 'times!')
 
 
+# Writing a separate priviliges class - mind that this class was written after writing the admin class finding the clutter caused by the priviliges is more
+class Priviliges():
+    '''Writing a separate priviliges class that can later be merged to be used with the admin class.'''
+    def __init__(self, priviliges):
+        self.priviliges = priviliges
+
+    def show_priviliges(self):
+        print('The administrator is vested with the following priviliges:')
+        for privilige in self.priviliges:
+            print('-',privilige)
+    
+
+
+
+
+
 
 # An administrator is a special kind of user. So the admin inherits the user class with some special priviliges.
 # Defining a class called Admin
@@ -58,14 +74,11 @@ class Admin(User):
 
     def __init__(self, first_name, last_name, age, priviliges):
         super().__init__(first_name, last_name, age)
-        self.priviliges = priviliges
+        self.priviliges = Priviliges(priviliges)
 
-    def show_priviliges(self):
-        print('The administrator is vested with the following priviliges:')
-        for privilige in self.priviliges:
-            print('-',privilige)
+    
         
 
 # Making an instance of Admin class or making a new admin
 admin = Admin('Ankit', 'Maini', 24, ['can add post', 'can delete post', 'can ban user', 'can create new user accounts'])
-admin.show_priviliges()    
+admin.priviliges.show_priviliges()    
