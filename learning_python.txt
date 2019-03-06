@@ -1,0 +1,5 @@
+In Python you can read files.
+In Python you can write files.
+In Python you can modify files.
+In Python you can draw pictures.
+In Python you can hack systems.
